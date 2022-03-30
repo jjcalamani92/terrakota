@@ -1,0 +1,210 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background: $white;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: $box-shadow;
+
+  .logo {
+    display: flex;
+    color: $primaryText;
+    align-items: center;
+    img{
+      height: 8rem;
+    }
+  }
+  .navbar {
+    ul{
+      list-style: none;
+      li{
+        position: relative;
+        float: left;
+        a{
+          transition: all 0.3s ease;
+          font-size: 2rem;
+          padding: 3.5rem 2rem;
+          color: $primaryText;
+          display: block;
+          text-transform: capitalize;
+          &:hover{
+            background: $primaryColor;
+            color: $white;
+          }
+        }
+        ul{
+          position: absolute;
+          left: 0;
+          width: 100%;
+          background: $white;
+          box-shadow: $box-shadow;
+          border: $border;
+          display: none;
+          li{
+            width: 100%;
+            a{
+              padding: 1rem;
+            }
+            ul{
+              left: 25rem;
+              top: 0;
+            }
+          }
+        }
+        // &:focus-within > ul,
+        &:hover > ul{
+          display: initial;
+          transition: all 0.3s ease;
+        }
+      }
+    }
+  }
+  .icons {
+    display: flex;
+    .icon {
+      @include icon(2.5rem);
+      color: $primaryText;
+      transition: all 0.5s ease;
+      background: $backgroundColor;
+      margin-right: .5rem;
+      cursor: pointer;
+      &:hover{
+        color: $white;
+        transition: all 0.5s ease;
+        background: $primaryColor;
+      }
+    }
+    .bars-icon{
+      display: none;
+    }
+    
+  }
+  .search {
+    display: flex;
+    position: absolute;
+    top: 115%; right: 2rem;
+    width: 50rem; height: 5.5rem;
+    background: $white;
+    transform: scale(0);
+    transition: all 0.5s ease;
+    transform-origin: top right;
+    border: $border;
+    input {
+      font-size: 1.7rem;
+      padding: 0 1.2rem;
+      height: 100%;
+      width: 100%;
+      text-transform: none;
+      color: $secondaryText;
+      border-radius: .5rem;
+    }
+    label {
+      display: flex;
+      height: 100%;
+      font-size: 2.5rem;
+      padding-right: 1.5rem;
+      color: $primaryText;
+      align-items: center;
+      padding: 0 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      background: $backgroundColor;
+      .icon {
+        margin: 0 1rem;
+      }
+      &:hover {
+        background: $primaryColor;
+        color: $white;
+        transition: all 0.3s ease;
+      }
+    }
+    &.active{
+      transition: all 0.5s ease;
+      transform: scale(1);
+    }
+  }
+  // .search {
+  //   width: 20%;
+  //   height: 5rem;
+  //   border: $border;
+  //   overflow: hidden;
+  //   background: $white;
+  //   display: none;
+  //   align-items: center;
+  //   border-radius: 2rem;
+  // }
+  @include desktop {
+    .logo{
+      padding: .5rem 0;
+    }
+    .icons{
+      .bars-icon {
+        display: inline-block;
+      }
+    }
+    
+    .navbar {
+      position: absolute;
+      top: 115%; right: 2rem;
+      width: 25rem;
+      background: $white;
+      box-shadow: $box-shadow;
+      border-radius: .5rem;
+      transform: scale(0);
+      transform-origin: top right;
+      transition: all 0.5s ease;
+      border: $border;
+      ul{
+        transition: all 0.5s ease;
+        display: inline-block;
+        li{
+          a{
+            padding: 2rem;
+          }
+          width: 100%;
+          ul{
+            position: relative;
+            width: 100%;
+            box-shadow: $box-shadow;
+            
+            li{
+              background: $white;
+              position: relative;
+              display: initial;
+              a{
+                font-weight: 700;
+              }
+              ul{
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+      &.active{
+        transition: all 0.5s ease;
+        transform: scale(1);
+      }
+    }
+    
+  }
+  @include tablet{
+    padding: 1rem 5%;
+    .logo {
+      padding: 0;
+      img{
+        height: 6rem;
+      }
+    }
+  }
+  @include telefono{
+    .search{
+      width: 90%;
+    }
+  }
+}

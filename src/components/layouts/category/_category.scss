@@ -1,0 +1,41 @@
+.category {
+  @include grid(6, 1.5rem);
+  .box {
+    padding: 2rem;
+    border-radius: 0.5rem;
+    background: $backgroundColor;
+    text-align: center;
+
+    &:hover {
+      background: $black;
+      transition: all 0.5s ease;
+
+      img {
+        filter: invert(1);
+        
+      }
+      p {
+        color: $white;
+      }
+    }
+
+    img {
+      height: 10rem;
+      margin-bottom: 1rem;
+      transition: all 0.5s ease;
+    }
+
+    p {
+      font-size: 1.7rem;
+      color: $black;
+      transition: all 0.5s ease;
+      text-transform: capitalize;
+    }
+  }
+@include tablet{
+  @include grid (3, 1.5rem);
+}
+@include telefono{
+  @include grid (2, 1.5rem);
+}
+}

@@ -1,0 +1,83 @@
+
+.home {
+  .slide {
+    @include grid(2, 1.5rem);
+    height: calc(90vh - 8rem);
+    background-size: cover !important;
+    background-position: center !important;
+    align-items: center;
+    
+
+    .content {
+      text-align: center;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      span {
+        color: $secondaryText;
+        display: block;
+        font-size: 2rem;
+        animation: fadeIn 0.4s linear 0.2s backwards;
+      }
+
+      h3 {
+        color: $primaryText;
+        text-transform: uppercase;
+        padding: 1rem 0;
+        font-size: 5.5rem;
+      }
+
+      .btn {
+        animation: fadeIn 0.4s linear 0.6s backwards;
+      }
+      img {
+        display: none;
+      }
+    }
+    .image {
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+
+  // .swiper-button-next,
+  // .swiper-button-prev {
+  //   position: absolute;
+  //   bottom: 2rem;
+  //   right: 2rem;
+  //   height: 6rem;
+  //   width: 6rem;
+  //   line-height: 5.5rem;
+  //   font-size: 4rem;
+  //   border: $border;
+  //   background: $white;
+  //   border-radius: 0.5rem;
+  //   cursor: pointer;
+  //   text-align: center;
+
+  //   &:hover {
+  //     background: $black;
+  //     color: $white;
+  //   }
+  // }
+
+  .swiper-pagination-bullet {
+    background: $white;
+
+    &.swiper-pagination-bullet-active {
+      background: #fff;
+    }
+  }
+  @include tablet {
+    .slide {
+      @include grid(1, 1.5rem);
+      height: auto;
+    }
+  }
+}

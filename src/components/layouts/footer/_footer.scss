@@ -1,0 +1,183 @@
+.footer {
+  background: $lightPrimaryColor;
+  @include grid(4, 1.5rem);
+  .box {
+    h3 {
+      @include titleText(2.5rem);
+      color: $black;
+      padding: 1rem 0;
+      
+    }
+    a {
+      display: block;
+      font-size: 1.5rem;
+      color: $primaryText;
+      padding: 1rem 0;
+      text-transform: capitalize;
+      
+      .icon{
+        padding-right: 1rem;
+        transition: all 0.5s ease;
+        color: $backgroundColor;
+        color: $black;
+      }
+      &:hover .icon{
+        color: $black;
+        padding-right: 2rem;
+        transition: all 0.5s ease;
+      }
+      span{
+        color: $backgroundColor;
+        font-weight: 700;
+        margin-left: .5rem;
+        color: $black;
+      }
+    }
+    .links{
+      text-transform: none;
+    }
+    p{
+      font-size: 1.5rem;
+      padding: 1rem 0;
+      color: $primaryText;
+      .icon{
+        padding-right: 1rem;
+        transition: all 0.5s ease;
+        color: $backgroundColor;
+        color: $black;
+      }
+      &:hover .icon{
+        color: $black;
+        padding-right: 2rem;
+        transition: all 0.5s ease;
+      }
+      span{
+        color: $backgroundColor;
+        font-weight: 700;
+        margin-left: .5rem;
+        color: $black;
+      }
+    }
+    form input[type="email"] {
+      width: 100%;
+      padding: 1rem 1.2rem;
+      border-radius: 0.5rem;
+      background: $backgroundColor;
+      font-size: 1.6rem;
+      text-transform: none;
+      margin: 0.5rem 0;
+    }
+    .share {
+      display: flex;
+      a {
+        
+        padding: 1rem;
+        background: $darkPrimaryColor;
+        color: $white;
+        margin-right: 0.5rem;
+        transition: all 0.5s ease;
+        
+        .iconS {
+          font-size: 3rem;
+          height: 3rem;
+          width: 3rem;
+          line-height: 3rem;
+          text-align: center;
+          align-items: center;
+        }
+        &:hover {
+          background: $accentColor;
+          transition: all 0.5s ease;
+        }
+      }
+    }
+  }
+@include tablet {
+    @include grid(2, 11rem);
+}
+@include telefono {
+    @include grid(1, 1rem);
+}
+}
+
+.footer_1 {
+  background: $backgroundColor;
+  padding: 2rem 9%;
+  @include grid(4, 1.5rem);
+  .box {
+    h3 {
+      @include titleText(2.5rem);
+      padding: 1rem 0;
+      
+    }
+    a {
+      display: block;
+      font-size: 1.5rem;
+      color: $primaryText;
+      padding: 1rem 0;
+      text-transform: capitalize;
+      
+      .icon{
+        padding-right: 1rem;
+        transition: all 0.5s ease;
+      }
+      &:hover .icon{
+        color: $primaryColor;
+        padding-right: 2rem;
+        transition: all 0.5s ease;
+      }
+      span{
+        color: $primaryColor;
+        margin-left: .5rem;
+      }
+    }
+    .links{
+      text-transform: none;
+    }
+    p{
+      font-size: 1.5rem;
+      padding: 1rem 0;
+      color: $primaryText;
+    }
+    form input[type="email"] {
+      width: 100%;
+      padding: 1rem 1.2rem;
+      border-radius: 0.5rem;
+      background: $white;
+      font-size: 1.6rem;
+      text-transform: none;
+      margin: 0.5rem 0;
+    }
+    .share {
+      display: flex;
+      a {
+        padding: 1rem;
+        color: $primaryColor;
+        background: $white;
+        margin-right: 0.5rem;
+        transition: all 0.5s ease;
+        border: $borderB;
+        
+        .iconS {
+          font-size: 3rem;
+          height: 3rem;
+          width: 3rem;
+          line-height: 3rem;
+          text-align: center;
+          align-items: center;
+        }
+        &:hover {
+          background: $darkPrimaryColor;
+          transition: all 0.5s ease;
+          color: $white
+        }
+      }
+    }
+  }
+@include tablet {
+    @include grid(2, 1.5rem);
+}
+@include telefono {
+    @include grid(1, 1.5rem);
+}
+}
